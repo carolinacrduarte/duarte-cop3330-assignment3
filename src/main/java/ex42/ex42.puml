@@ -1,11 +1,14 @@
 @startuml
-'https://plantuml.com/sequence-diagram
+class dataPrinter {
+  +dataPrint(Scanner input)
+  +input.hasNextLine()
+}
 
-autonumber
+class App {
+  +main(String[])
+  +Scanner(inputFile)
+  +dataPrint(inputFile)
+}
 
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
-
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+dataPrinter <|-- App
 @enduml

@@ -10,7 +10,10 @@ class App {
   +names: ArrayList<String>
   +main(String[])
   +Scanner(inputFile)
-  +names.sort(String)
+  +nameSorter.namesReader(inputFile, names)
+  +names.sort(String.CASE_INSENSITIVE_ORDER)
+  +nameSorter.namesOutput(names)
+
 }
 
 nameSorter <|-- App

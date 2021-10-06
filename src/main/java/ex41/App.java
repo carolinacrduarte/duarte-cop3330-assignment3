@@ -43,7 +43,7 @@ public class App {
         }
 
         catch (Exception e) { //Exception case.
-            System.out.println(e);
+            System.out.println("Error, file not found!");
         }
     }
 }

@@ -1,11 +1,20 @@
 @startuml
-'https://plantuml.com/sequence-diagram
+class websiteGenerator {
+  +String currentPath
+  +File website
+  +FileWriter bodyWriter
+  +System.getProperty("user.dir")
+  +File(currentPath)
+  +bodyWriter()
+}
 
-autonumber
+class App {
+  +String author, siteName
+  +char js, css
+  +main(String[])
+  +Scanner(input)
+  +websiteWriter(author, siteName, js, css)
+}
 
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
-
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+websiteGenerator <|-- App
 @enduml
