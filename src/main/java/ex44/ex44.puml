@@ -1,11 +1,19 @@
 @startuml
-'https://plantuml.com/sequence-diagram
+class productScan {
+    +int count
+    +JSONObject json
+    +String name
+    +productScanner(String input, JSONArray subjects)
+    +input.equalsIgnoreCase(name)
+}
 
-autonumber
+class App {
+    +JSONParser parser
+    +Object obj
+    +JSONArray subjects
+    +BufferedReader(new InputStreamReader(System.in)
+    +productScanner(input, subjects)
+}
 
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
-
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+productScan <|-- App
 @enduml
