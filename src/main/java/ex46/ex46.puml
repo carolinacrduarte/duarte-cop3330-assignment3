@@ -1,11 +1,32 @@
 @startuml
-'https://plantuml.com/sequence-diagram
+class wordFrequencyFinder {
+    +getWordFrequency(String fileContent)
+    +Map<String, Integer> mp
+    +String[] arr
+    +String s
+    +mp.containsKey(s)
+    +mp.put(s)
+    +mp.get(s)
+    +mp.entrySet()
+    +entry.getKey()
+    +entry.getValue()
+}
 
-autonumber
+class fileConverter {
+    +Scanner scanner
+    +String content
+    +readFileIntoString(String path, Charset encoding)
+}
 
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
+class App {
+    +String filePath
+    +String fileContent
+    +readFileIntoString(filePath, StandardCharsets.UTF_8)
+    +fileContent.replaceAll("(\\r\\n\\t)", " ")
+    +fileContent.replaceAll("\\s+"," ").trim()
+    +getWordFrequency(fileContent)
+}
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+fileConverter <|-- App
+wordFrequencyFinder <|-- fileConverter
 @enduml

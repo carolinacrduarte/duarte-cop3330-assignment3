@@ -8,6 +8,13 @@ package ex45;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/*
+File editor:
+    Takes in user input for output file name and contents of the input file via a built string.
+    Uses replaceAll function to perform word replacement.
+    Writes a new edited file to output and closes output file.
+*/
+
 public class fileEditor {
     public static void editedFileOutput(String output_file_name, String contents) throws IOException {
 

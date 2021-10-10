@@ -1,11 +1,18 @@
 @startuml
-'https://plantuml.com/sequence-diagram
+class fileEditor {
+    +editedFileOutput(String output_file_name, String contents)
+    +FileWriter(output_file_name)
+    +contents.replaceAll("utilize", "use")
+    +output.write(contents)
+}
 
-autonumber
+class App {
+    +Scanner userInput
+    +Scanner inputFile
+    +String text_lines
+    +StringBuilder sb
+    +editedFileOutput(output_file_name, contents)
+}
 
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
-
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+fileEditor <|-- App
 @enduml

@@ -5,11 +5,22 @@ package ex45;
  *  Copyright 2021 Carolina Duarte
  */
 
+/*
+This program takes input file text named exercise45_input.txt, reads the file and looks for all occurrences of the word "utilize". Then it replaces each occurrence with the synonym "use". At last, it writes the modified file to a new output file named after the desired user's input.
+*/
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
-
 import static ex45.fileEditor.editedFileOutput;
+
+/*
+Main function:
+    Requests user's desired output file name.
+    Reads input text file via the scanner.
+    Builds a string with all the input text scanned on the file.
+    Calls file editor function and closes input file.
+*/
 
 public class App {
     public static void main(String[] args) throws IOException {
