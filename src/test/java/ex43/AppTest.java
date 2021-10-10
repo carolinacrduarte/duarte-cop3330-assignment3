@@ -1,5 +1,10 @@
 package ex43;
 
+/*
+ *  UCF COP3330 Fall 2021 Assignment 3 Solution
+ *  Copyright 2021 Carolina Duarte
+ */
+
 import org.junit.jupiter.api.Test;
 
 import static ex43.websiteGenerator.websiteWriter;

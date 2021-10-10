@@ -6,6 +6,11 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/*
+ *  UCF COP3330 Fall 2021 Assignment 3 Solution
+ *  Copyright 2021 Carolina Duarte
+ */
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class nameSorterTest {
