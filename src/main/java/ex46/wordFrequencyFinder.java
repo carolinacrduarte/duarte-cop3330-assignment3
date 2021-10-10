@@ -18,7 +18,7 @@ Word Frequency Finder:
  */
 
 public class wordFrequencyFinder {
-    public static void getWordFrequency(String fileContent) {
+    public static Object getWordFrequency(String fileContent) {
         {
             Map<String, Integer> mp = new TreeMap<>();
 
@@ -43,6 +43,7 @@ public class wordFrequencyFinder {
                 System.out.print("\n\n");
             }
         }
+        return null;
     }
 }
 
